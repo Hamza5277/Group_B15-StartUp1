@@ -1,4 +1,4 @@
-// This section will allow the users to search up a topic which would direct them there
+
 const sectionMap = {
     'home': '#home',
     'about': '#about', 

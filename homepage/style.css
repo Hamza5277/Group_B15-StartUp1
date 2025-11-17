@@ -96,10 +96,9 @@ nav {
                 center/cover no-repeat;
     position: relative;
     color: #ffffff;
-    min-height: 90vh; /* full viewport height */
+    min-height: 90vh;
 }
 
-/* Dark overlay for readability */
 .hero::before {
     content: '';
     position: absolute;
@@ -107,12 +106,12 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.35); /* semi-transparent overlay */
+    background: rgba(0,0,0,0.35);
     z-index: 0;
 }
 
 .hero-left, .hero-right {
-    position: relative; /* content above overlay */
+    position: relative;
     z-index: 1;
 }
 
@@ -143,13 +142,6 @@ nav {
 
 .cta-button:hover { background-color: #4a7c2a; }
 
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
 /* Purpose Section */
 .purpose-section { padding: 3.5rem 5%; text-align: center; }
 .purpose-section .purpose-container { max-width: 1000px; margin: 0 auto; }
@@ -171,20 +163,6 @@ nav {
 .london-card:hover { transform: translateY(-6px); }
 .london-image { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; }
 
-/* Generic sections */
-.generic-section { padding: 3rem 5%; text-align: center; max-width: 1100px; margin: 0 auto; }
-.viz-placeholder { border: 2px dashed #cfe6cf; padding: 2rem; border-radius: 8px; margin-top: 1rem; color: #4a7c2a; }
-
-/* Sightings form & list */
-.sighting-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; max-width: 900px; margin: 1rem auto; }
-.sighting-form input, .sighting-form textarea { padding: 0.65rem; border-radius: 8px; border: 1px solid #ddd; resize: vertical; }
-.sighting-form textarea { grid-column: 1 / -1; min-height: 80px; }
-.sighting-form button { grid-column: 1 / -1; background: #2d5016; color: #fff; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; }
-.sighting-form button:hover { background:#4a7c2a; }
-
-.sightings-list { max-width: 900px; margin: 1rem auto; display: flex; flex-direction: column; gap: 0.75rem; }
-.sighting-card { background: #fff; border-radius: 8px; padding: 0.9rem; box-shadow: 0 4px 18px rgba(0,0,0,0.04); }
-
 /* Footer */
 footer { background-color: #000000; color: #ffffff; text-align: center; padding: 2rem 5%; margin-top: 2rem; }
 
@@ -192,7 +170,6 @@ footer { background-color: #000000; color: #ffffff; text-align: center; padding:
 @media (max-width: 900px) {
     .search-container input { width: 160px; }
     .headline { font-size: 1.8rem; }
-    .sighting-form { grid-template-columns: 1fr; }
     .purpose-image { width: 60%; margin: 0.75rem auto 0; display:block; }
 }
 
@@ -201,4 +178,17 @@ footer { background-color: #000000; color: #ffffff; text-align: center; padding:
     .search-container { justify-content: center; margin: 0; }
     .nav-links { justify-content: center; gap: 0.6rem; padding-bottom: 0.5rem; }
     .hero { padding: 2rem 4%; }
+}
+
+
+.signin-btn {
+    background-color: #2d5016;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+    background-color: #4a7c2a;
 }
