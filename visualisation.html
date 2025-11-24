@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualisation | Wildlife Tracker</title>
+
+    <!-- Main Site CSS -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Visualisation Page CSS -->
+    <link rel="stylesheet" href="visualisation.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- HEADER (copied from homepage for consistency) -->
+    <header>
+        <div class="logo">
+            <h1>Wildlife & Forest Tracking 🌿</h1>
+            <p>Explore wildlife and forest health data</p>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="visualisation.html" class="active">Visualisation</a>
+            <a href="../forestalerts/forestalerts.html">Report</a>
+            <a href="../quiz/quizpage.html">Quiz</a>
+            <a href="../survey/survey.html">Survey</a>
+        </nav>
+    </header>
+
+    <!-- VISUALISATION PAGE CONTENT -->
+    <section class="visualisation-section">
+        <div class="visualisation-container">
+            <h2>Wildlife & Deforestation Visualisation</h2>
+            <p>Interactive data showing wildlife sightings and forest loss.</p>
+
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Wildlife Sightings (Monthly)</h3>
+                    <canvas id="wildlifeChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Forest Loss (Yearly)</h3>
+                    <canvas id="forestChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="visualisation.js"></script>
+</body>
+</html>
