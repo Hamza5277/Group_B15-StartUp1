@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Tracker - Protecting Life on Land</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Wildlife Tracker</div>
+
+        <div class="search-container" role="search" aria-label="Search site sections">
+            <input type="text" id="searchInput" placeholder="Search sections" aria-label="Search sections">
+            <button id="searchBtn" aria-label="Go to section">Go</button>
+        </div>
+
+        <ul class="nav-links" aria-label="Main navigation">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#purpose">About</a></li>
+            <li><a href="#visualisation">Visualisation</a></li>
+            <li><a href="#wildlife">Contact</a></li>
+            <li><a href="#" class="signin-btn">Sign In</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <input type="text" id="searchInputMobile" placeholder="Search sections">
+        <a href="#home">Home</a>
+        <a href="#purpose">About</a>
+        <a href="#visualisation">Visualisation</a>
+        <a href="#wildlife">Contact</a>
+        <a href="#" class="signin-btn">Sign In</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="headline">Protecting Our Forests, Preserving Our Future</h1>
+            <p class="description">
+                Track deforestation and wildlife in your community. Learn how human activities affect nature and what you can do to protect life on land.
+            </p>
+            <button class="cta-button" id="exploreBtn">Explore Nearby Areas</button>
+        </div>
+    </section>
+
+    <!-- Purpose Section -->
+    <section class="purpose-section" id="purpose">
+        <div class="purpose-container">
+            <h2>Welcome to Local Wildlife Tracker</h2>
+            <p>
+                Wildlife Tracker is designed to empower communities to observe, protect and support local animal populations and their habitats. 
+                By providing tools to report wildlife sightings, track species health and changes in animal behavior or habitat conditions, our platform
+                encourages conservation and engagement with the natural world.
+            </p>
+            <p>
+                Our goal is to increase awareness of local biodiversity, promote and educate the public about the vital role animals have in maintaining a balanced
+                ecosystem. Whether you're a student, volunteer, or concerned neighbor, Wildlife Tracker offers the knowledge and support needed to make informed decisions
+                that help protect and preserve local wildlife.
+            </p>
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                 alt="Wildlife in natural habitat" class="purpose-image">
+        </div>
+    </section>
+
+    <!-- Threats Section -->
+    <section class="threats-section" id="threats">
+        <div class="threats-container">
+            <h2>Threats to Wildlife</h2>
+            <div class="threats-grid">
+                <div class="threat-card">
+                    <div class="threat-icon">⚠️</div>
+                    <h3>Habitat Loss</h3>
+                    <p>Wildlife face numerous challenges. Habitat loss from construction, pollution, and traffic reduces the space animals need to feed, breed, and thrive.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">🏭</div>
+                    <h3>Pollution</h3>
+                    <p>Pollution from traffic, waste, and industrial activities harms local wildlife by contaminating the air they breathe, the water they drink and the habitats they are dependent on.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">🪓</div>
+                    <h3>Human Activities</h3>
+                    <p>Human activities such as cutting hedgerows, removing trees, or encroaching on green spaces can fragment habitats, making it harder for wildlife to survive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualisation Section -->
+    <section class="visualisation-section" id="visualisation">
+        <div class="visualisation-container">
+            <h2>Ecosystem Degradation: A Real-World Timeline</h2>
+            <p class="visualisation-intro">
+                This visualization shows the devastating impact of habitat destruction on the African Savanna ecosystem over 35 years. 
+                Watch as a thriving landscape transforms into barren wasteland, taking hundreds of species with it.
+            </p>
+
+            <div class="timelapse-viewer">
+                <div class="image-container">
+                    <img id="timelapseImage" src="images/stage1.jpg" alt="Ecosystem timelapse">
+                    
+                    <div class="year-badge" id="yearBadge">1990</div>
+                    
+                    <div class="species-badge">
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="speciesCount">150+ species</span>
+                    </div>
+                    
+                    <div class="image-caption">
+                        <h3 id="stageTitle">Healthy Ecosystem</h3>
+                        <p id="stageDescription">Thriving savanna with abundant wildlife - elephants, zebras, and giraffes roam freely.</p>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <div class="control-buttons">
+                        <button class="control-btn" id="prevBtn" title="Previous">◀</button>
+                        <button class="control-btn play-btn" id="playPauseBtn" title="Play/Pause">▶</button>
+                        <button class="control-btn" id="nextBtn" title="Next">▶</button>
+                        <button class="control-btn" id="resetBtn" title="Reset">↺</button>
+                        <span class="counter" id="counter">1 / 8</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <div class="timeline-buttons" id="timelineButtons">
+                        <!-- Generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3>The Serengeti-Mara Ecosystem: A Case Study</h3>
+                <p>
+                    This visualization is based on real data from the Serengeti-Mara ecosystem, one of the most iconic wildlife regions on Earth. 
+                    While conservation efforts have helped protect parts of this area, surrounding regions have faced severe degradation.
+                </p>
+                <p>
+                    Climate change, agricultural expansion, and poaching have reduced wildlife populations by over 70% in some areas since 1990. 
+                    Without immediate action, experts warn that entire ecosystems could collapse within decades, taking thousands of species with them.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deforestation Info Section -->
+    <section class="deforestation-section" id="deforestation">
+        <div class="deforestation-container">
+            <h2>Why Animal Wildlife Matters</h2>
+            <p>
+                Animals are essential to healthy ecosystems. They help control pests, pollinate plants, disperse seeds and maintain the balance of nature.
+            </p>
+            <p>
+                Protecting animal populations ensures biodiversity, strengthens resilience against environmental changes, and keeps urban and rural ecosystems functioning properly.
+                Every species, no matter how small, plays a critical role - this makes it crucial for communities to raise awareness as animals play a vital role to sustain a healthy ecosystem.
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">❤️</div>
+                    <h3>Pest Control</h3>
+                    <p>Animals help control insect populations naturally</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Pollination</h3>
+                    <p>Bees, birds, and bats pollinate plants and crops</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Seed Dispersal</h3>
+                    <p>Wildlife spreads seeds to regenerate forests</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Ecosystem Balance</h3>
+                    <p>Each species plays a role in maintaining balance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Wildlife Section -->
+    <section class="wildlife-section" id="wildlife">
+        <div class="wildlife-container">
+            <h2>Wildlife in Our Communities</h2>
+            <p class="wildlife-intro">
+                Even in urban areas like London, diverse animal species thrive in parks, gardens and green spaces.
+                Foxes, hedgehogs, birds, and insects are indicators of healthy ecosystems.
+                By observing wildlife, communities can identify areas that need protection and help promote coexistence between animals and humans,
+                developing a healthy ecosystem for the future.
+            </p>
+
+            <div class="wildlife-gallery">
+                <div class="wildlife-card">
+                    <img src="images/urbanfox.jpg" alt="Urban fox in garden">
+                    <div class="wildlife-card-content">
+                        <h3>Urban Foxes</h3>
+                        <p>Adapted to city life across the UK</p>
+                    </div>
+                </div>
+                <div class="wildlife-card">
+                    <img src="images/hedgehog.jpg" alt="Hedgehog in garden">
+                    <div class="wildlife-card-content">
+                        <h3>Garden Hedgehogs</h3>
+                        <p>Important pest controllers in decline</p>
+                    </div>
+                </div>
+                <div class="wildlife-card">
+                    <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=400&h=300&fit=crop" alt="Bird in urban park">
+                    <div class="wildlife-card-content">
+                        <h3>Urban Birds</h3>
+                        <p>From robins to rare species</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-box">
+                <h3>Contact Us</h3>
+                <p>Have questions, feedback, or want to collaborate with us? Reach out using the details below.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>support@wildlifetracker.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+44 1234 567 890</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>123 Greenway Lane, London, UK</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-btn" title="Instagram">📷</a>
+                    <a href="#" class="social-btn" title="Twitter">🐦</a>
+                    <a href="#" class="social-btn" title="Facebook">📘</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wildlife Tracker. Protecting Life on Land.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
