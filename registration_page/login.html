@@ -55,18 +55,39 @@
     </div>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-            
-            if (email === "" || password === "") {
-                alert("Please fill in both email and password.");
-            } else {
-                alert("Login successful (placeholder). Redirecting to home...");
-                window.location.href = "../homepage/index.html";
-            }
+document.getElementById("loginForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!email || !password) {
+        alert("Please fill in both email and password.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password })
         });
-    </script>
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.message);
+            return;
+        }
+
+        alert("Login successful! Redirecting...");
+        window.location.href = "../homepage/index.html";
+
+    } catch (error) {
+        alert("Error connecting to the server.");
+        console.error(error);
+    }
+});
+</script>
 </body>
 </html>

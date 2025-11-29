@@ -86,13 +86,13 @@ function validateConfirmPassword() {
     }
 }
 
-// Real-time validation
+
 nameInput.addEventListener('blur', validateName);
 emailInput.addEventListener('blur', validateEmail);
 passwordInput.addEventListener('blur', validatePassword);
 confirmPasswordInput.addEventListener('blur', validateConfirmPassword);
 
-// Also validate confirm password when password changes
+
 passwordInput.addEventListener('input', function() {
     if (confirmPasswordInput.value !== '') {
         validateConfirmPassword();
@@ -110,26 +110,40 @@ form.addEventListener('submit', function(e) {
     const isConfirmPasswordValid = validateConfirmPassword();
     
     // If all validations pass
-    if (isNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
-        // Get form data
-        const formData = {
-            name: nameInput.value.trim(),
-            email: emailInput.value.trim(),
-            password: passwordInput.value
-        };
-        
-        // Display success message
-        alert('Registration Successful!\n\nName: ' + formData.name + '\nEmail: ' + formData.email);
-        
-        // Redirect directly to login page
-        window.location.href = './login.html';
-        
-        // Reset form
+if (isNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
+
+    const formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        password: passwordInput.value
+    };
+
+    // Send registration data to backend
+    fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === "Email already registered") {
+            alert("This email is already registered.");
+            return;
+        }
+
+        alert("Registration successful!");
+        window.location.href = "./login.html";
         form.reset();
-    }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("There was a problem connecting to the server.");
+    });
+}
+
 });
 
-// Login link functionality
+
 const loginLink = document.getElementById('loginLink');
 loginLink.addEventListener('click', function(e) {
     e.preventDefault();
