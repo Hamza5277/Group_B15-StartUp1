@@ -1,4 +1,5 @@
 
+
 const sectionMap = {
     'home': '#home',
     'about': '#about', 
