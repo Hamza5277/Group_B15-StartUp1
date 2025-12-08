@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Wildlife Tracker - Contact</title>
+
     <link rel="stylesheet" href="registration_page/registration.css" />
+
     <style>
-        /* Additional specific styles for contact page */
+        
 
         .btn-home {
             display: inline-block;
@@ -14,38 +16,37 @@
             background-color: #2d5016;
             color: white;
             padding: 10px 20px;
-            border: none;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease;
         }
 
         .btn-home:hover {
             background-color: #3e6920;
         }
 
-        .registration-form p {
-            margin-bottom: 0.8rem;
-            line-height: 1.5;
+        .registration-form textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: vertical;
         }
 
-        .form-group p {
-            margin-top: 0.3rem;
-            color: #333;
-        }
-
-        .form-group label {
+        #contactFeedback {
+            margin-top: 0.8rem;
             font-weight: bold;
-            color: #2d5016;
         }
     </style>
 </head>
+
 <body>
     <div class="background-overlay"></div>
 
     <div class="registration-container">
         <div class="registration-card">
+
             <div class="logo-section">
                 <div class="logo-icon"></div>
                 <h1>Contact Us</h1>
@@ -53,13 +54,14 @@
             </div>
 
             <div class="registration-form">
-                <h2>We’d love to hear from you!</h2>
+                <h2>We’d love to hear from you</h2>
 
                 <p>
                     Have questions, feedback, or want to collaborate with us?  
-                    Reach out using the details below — we’ll get back to you as soon as possible.
+                    You can reach us using the details below or send us a message directly.
                 </p>
 
+                
                 <div class="form-group">
                     <label>Email</label>
                     <p>support@wildlifetracker.org</p>
@@ -84,9 +86,45 @@
                     </p>
                 </div>
 
+                
+                <hr>
+
+                <h3>Send us a message</h3>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email</label>
+                        <input 
+                            type="email" 
+                            id="contactEmail" 
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea 
+                            id="contactMessage" 
+                            placeholder="Write your message here"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-register">
+                        Send Message
+                    </button>
+
+                    <p id="contactFeedback"></p>
+                </form>
+
                 <a href="index.html" class="btn-home">← Back to Home</a>
             </div>
         </div>
     </div>
+
+    
+    <script src="contact.js"></script>
 </body>
 </html>
+
