@@ -3,5 +3,10 @@
     "name": "try",
     "email": "try@try.com",
     "password": "$2b$10$qctTM2V5.5HygdzA4ZaOFeYIHGo5QdcWCcYW4TkyfK091psZNmUZm"
+  },
+  {
+    "name": "ww",
+    "email": "cat@cat.com",
+    "password": "$2b$10$I1zP9Em4TXoE3BrmciW/5.B88sC1MwpudONrXDktIXA9.Ct6HL9du"
   }
 ]
