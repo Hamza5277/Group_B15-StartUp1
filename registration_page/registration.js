@@ -119,7 +119,7 @@ if (isNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
     };
 
     // Send registration data to backend
-    fetch("http://localhost:5000/register", {
+    fetch("http://localhost:8080/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)

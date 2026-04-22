@@ -8,5 +8,15 @@
     "name": "ww",
     "email": "cat@cat.com",
     "password": "$2b$10$I1zP9Em4TXoE3BrmciW/5.B88sC1MwpudONrXDktIXA9.Ct6HL9du"
+  },
+  {
+    "name": "qazwsx",
+    "email": "qazwsx@qazwsx.com",
+    "password": "$2b$10$9t3fAhowflMZ2/uleuEwhuHhGOjaTW1mvJ9CYCFPsNlAMznejzLIm"
+  },
+  {
+    "name": "1234",
+    "email": "1234@1234.com",
+    "password": "$2b$10$UJKlwas6I7bS1Im3dOFO..P6AHHha5LTzKnRHPSOmQrax2jhEXok6"
   }
 ]

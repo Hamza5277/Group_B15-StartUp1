@@ -100,3 +100,6 @@ app.post("/contact", (req, res) => {
         res.status(500).json({ message: "Server error while saving message." });
     }
 });
+app.listen(5000, () => {
+    console.log("Server running on http://localhost:5000");
+});

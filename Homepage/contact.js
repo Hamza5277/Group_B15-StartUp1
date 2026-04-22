@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/contact", {
+            const response = await fetch("http://localhost:8080/api/messages/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!response.ok) {
                 feedback.style.color = "red";
-                feedback.textContent = "There was a problem sending your message.";
+                feedback.textContent = data.message || "There was a problem sending your message.";
                 return;
             }
 
             feedback.style.color = "#2d5016";
-            feedback.textContent = data.message;
+            feedback.textContent = `Thank you for your message. Your ID is ${data.ticketId}`;
             form.reset();
         } catch (error) {
             feedback.style.color = "red";
