@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildlife Tracker - Contact</title>
-    <link rel="stylesheet" href="registration_page/registration.css" />
+    <link rel="stylesheet" href="../registration_page/registration.css">
     <style>
+        
         .btn-home {
             display: inline-block;
             margin-top: 1rem;
@@ -23,6 +24,7 @@
             background-color: #3e6920;
         }
 
+        
         .registration-form p {
             margin-bottom: 0.8rem;
             line-height: 1.5;
@@ -36,37 +38,6 @@
         .form-group label {
             font-weight: bold;
             color: #2d5016;
-        }
-
-        .registration-form textarea {
-            width: 100%;
-            min-height: 100px;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            resize: vertical;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .registration-form input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        #contactFeedback {
-            margin-top: 0.8rem;
-            font-weight: bold;
-        }
-
-        hr {
-            margin: 1.5rem 0;
-            border: none;
-            border-top: 1px solid #ccc;
         }
     </style>
 </head>
@@ -85,7 +56,7 @@
                 <h2>We’d love to hear from you!</h2>
 
                 <p>
-                    Have questions, feedback, or want to collaborate with us?
+                    Have questions, feedback, or want to collaborate with us?  
                     Reach out using the details below — we’ll get back to you as soon as possible.
                 </p>
 
@@ -113,39 +84,9 @@
                     </p>
                 </div>
 
-                <hr>
-
-                <h2>Send us a message</h2>
-
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="contactEmail">Your Email</label>
-                        <input
-                            type="email"
-                            id="contactEmail"
-                            placeholder="Enter your email"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contactMessage">Your Message</label>
-                        <textarea
-                            id="contactMessage"
-                            placeholder="Write your message here"
-                            required
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-register">Send Message</button>
-                    <p id="contactFeedback"></p>
-                </form>
-
                 <a href="index.html" class="btn-home">← Back to Home</a>
             </div>
         </div>
     </div>
-
-    <script src="contact.js"></script>
 </body>
 </html>
