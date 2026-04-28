@@ -25,6 +25,12 @@ public class TeamMemberController {
         return teamMemberRepository.save(member);
     }
 
+    @PutMapping("/{id}")
+    public TeamMember updateMember(@PathVariable Long id, @RequestBody TeamMember member) {
+        member.setId(id);
+        return teamMemberRepository.save(member);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteMember(@PathVariable Long id) {
         teamMemberRepository.deleteById(id);
