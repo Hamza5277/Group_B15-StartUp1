@@ -12,7 +12,6 @@ h1, h2, h3, h4 { color: #163200; }
 h2 { margin-bottom: 1rem; text-align: center; }
 p { color: #333; margin-bottom: 1rem; }
 
-/* Navigation - Matches Homepage Style */
 nav {
     display: flex;
     align-items: center;
@@ -41,13 +40,8 @@ nav {
     transition: color 0.2s;
 }
 
-.nav-links a:hover {
-    color: #90EE90;
-}
-
-.nav-links a.active {
-    color: #90EE90;
-}
+.nav-links a:hover { color: #90EE90; }
+.nav-links a.active { color: #90EE90; }
 
 .sign-in-btn {
     background-color: #4CAF50;
@@ -59,11 +53,8 @@ nav {
     transition: background 0.2s;
 }
 
-.sign-in-btn:hover {
-    background-color: #45a049;
-}
+.sign-in-btn:hover { background-color: #45a049; }
 
-/* Mobile Menu */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -94,9 +85,7 @@ nav {
     gap: 1rem;
 }
 
-.mobile-menu.active {
-    display: flex;
-}
+.mobile-menu.active { display: flex; }
 
 .mobile-menu a {
     color: white;
@@ -105,7 +94,6 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Page Header - Simple, Different from Homepage */
 .page-header {
     background-color: #2d5016;
     color: white;
@@ -126,28 +114,11 @@ nav {
     margin: 0 auto;
 }
 
-/* Section Styles */
-.section {
-    padding: 3rem 5%;
-    text-align: center;
-}
+.section { padding: 3rem 5%; text-align: center; }
+.section-alt { background-color: #f5f5f5; }
+.section-container { max-width: 1000px; margin: 0 auto; }
+.section-intro { max-width: 700px; margin: 0 auto 2rem; font-size: 1.05rem; }
 
-.section-alt {
-    background-color: #f5f5f5;
-}
-
-.section-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-intro {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    font-size: 1.05rem;
-}
-
-/* Mission Section */
 .mission-box {
     display: flex;
     align-items: flex-start;
@@ -174,17 +145,9 @@ nav {
     flex-shrink: 0;
 }
 
-.mission-content h3 {
-    color: #2d5016;
-    margin-bottom: 1rem;
-}
+.mission-content h3 { color: #2d5016; margin-bottom: 1rem; }
+.mission-content p { color: #555; line-height: 1.7; }
 
-.mission-content p {
-    color: #555;
-    line-height: 1.7;
-}
-
-/* Team Section */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -203,13 +166,8 @@ nav {
     transition: transform 0.2s;
 }
 
-.team-card:hover {
-    transform: translateY(-4px);
-}
-
-.team-card-featured {
-    border: 2px solid #2d5016;
-}
+.team-card:hover { transform: translateY(-4px); }
+.team-card-featured { border: 2px solid #2d5016; }
 
 .featured-badge {
     position: absolute;
@@ -235,23 +193,9 @@ nav {
     margin: 0 auto 1rem;
 }
 
-.avatar-initials {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #2d5016;
-}
-
-.team-name {
-    font-size: 1.1rem;
-    color: #163200;
-    margin-bottom: 0.25rem;
-}
-
-.team-id {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 0.5rem;
-}
+.avatar-initials { font-size: 1.25rem; font-weight: 700; color: #2d5016; }
+.team-name { font-size: 1.1rem; color: #163200; margin-bottom: 0.25rem; }
+.team-id { font-size: 0.8rem; color: #888; margin-bottom: 0.5rem; }
 
 .team-role {
     display: inline-block;
@@ -264,19 +208,9 @@ nav {
     margin-bottom: 0.75rem;
 }
 
-.team-contribution {
-    font-size: 0.85rem;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
+.team-contribution { font-size: 0.85rem; color: #555; line-height: 1.5; margin-bottom: 0; }
 
-/* References Section */
-.references-list {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
+.references-list { max-width: 800px; margin: 0 auto; text-align: left; }
 
 .reference-item {
     background: #f9f9f9;
@@ -286,18 +220,9 @@ nav {
     border-radius: 0 6px 6px 0;
 }
 
-.reference-item p {
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #444;
-}
+.reference-item p { margin-bottom: 0; font-size: 0.9rem; line-height: 1.6; color: #444; }
+.reference-item em { font-style: italic; }
 
-.reference-item em {
-    font-style: italic;
-}
-
-/* Footer */
 footer {
     background-color: #000000;
     color: #ffffff;
@@ -305,44 +230,34 @@ footer {
     padding: 1.5rem 5%;
 }
 
-.footer-content p {
-    color: #aaa;
-    font-size: 0.85rem;
-    margin-bottom: 0.25rem;
+.footer-content p { color: #aaa; font-size: 0.85rem; margin-bottom: 0.25rem; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .sign-in-btn { display: none; }
+    .mobile-menu-btn { display: flex; }
+    nav { justify-content: flex-end; }
+    .page-header h1 { font-size: 2rem; }
+    .mission-box { flex-direction: column; text-align: center; }
+    .sdg-icon { margin: 0 auto; }
+    .mission-content { text-align: left; }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .sign-in-btn {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
-    
-    nav {
-        justify-content: flex-end;
-    }
-    
-    .page-header h1 {
-        font-size: 2rem;
-    }
-    
-    .mission-box {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .sdg-icon {
-        margin: 0 auto;
-    }
-    
-    .mission-content {
-        text-align: left;
-    }
+/* API Status Badge */
+.api-status { text-align: center; margin-bottom: 1.5rem; }
+.api-badge { display: inline-block; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+.api-online { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.api-offline { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+
+/* Loading Spinner */
+.team-loading { grid-column: 1 / -1; text-align: center; padding: 3rem; color: #666; }
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e0e0e0;
+    border-top: 4px solid #2e7d32;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
 }
+@keyframes spin { to { transform: rotate(360deg); } }
